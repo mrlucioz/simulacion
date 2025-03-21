@@ -131,10 +131,11 @@ public class PrimeraP {
 			cuartoTest();
 			Actions actions = new Actions(driver);
 			actions.sendKeys(Keys.PAGE_DOWN).perform();  // Baja una pantalla
-			WebElement finishButton = driver.findElement(By.className("btn_action"));
+			Thread.sleep(1000); // Espera 1 segundo
+			WebElement finishButton = driver.findElement(By.xpath("//*[@id=\"checkout_summary_container\"]/div/div[2]/div[8]/a[2]"));
 			finishButton.click();
 			
-			Thread.sleep(1000); // Espera 1 segundo (1000 milisegundos)
+			Thread.sleep(1000); // Espera 1 segundo
 
 			WebElement txtconfirmacion = driver.findElement(By.className("complete-header"));
 		
@@ -152,6 +153,7 @@ public class PrimeraP {
 			cuartoTest();
 			Actions actions = new Actions(driver);
 			actions.sendKeys(Keys.PAGE_DOWN).perform();  // Baja una pantalla
+			Thread.sleep(1000); // Espera 1 segundo
 			WebElement finishButton = driver.findElement(By.className("btn_action"));
 			finishButton.click();
 			
